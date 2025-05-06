@@ -1,0 +1,83 @@
+---
+// This is a reusable Astro component for the bidet compatibility checker.
+---
+
+<div class="checker-container">
+  <h2>🧻 Bidet + Riser Compatibility Checker</h2>
+  <form id="compatibilityForm">
+    <div class="question">
+      <h3>1. Does your riser attach using the toilet seat bolts?</h3>
+      <button type="button" onclick="setAnswer(0, false)">Yes</button>
+      <button type="button" onclick="setAnswer(0, true)">No</button>
+    </div>
+
+    <div class="question">
+      <h3>2. Is there enough space (~0.5") between your riser and toilet bowl?</h3>
+      <button type="button" onclick="setAnswer(1, true)">Yes</button>
+      <button type="button" onclick="setAnswer(1, false)">No</button>
+    </div>
+
+    <div class="question">
+      <h3>3. Does your riser block the rear spray zone?</h3>
+      <button type="button" onclick="setAnswer(2, false)">No</button>
+      <button type="button" onclick="setAnswer(2, true)">Yes</button>
+    </div>
+
+    <div class="question">
+      <h3>4. Can you access the water line near the toilet tank?</h3>
+      <button type="button" onclick="setAnswer(3, true)">Yes</button>
+      <button type="button" onclick="setAnswer(3, false)">No</button>
+    </div>
+
+    <div class="question">
+      <h3>5. Will the total seat height be too high (over ~21")?</h3>
+      <button type="button" onclick="setAnswer(4, false)">No</button>
+      <button type="button" onclick="setAnswer(4, true)">Yes</button>
+    </div>
+
+    <button type="button" onclick="calculateResult()">Check Compatibility</button>
+  </form>
+
+  <div id="result" class="result" style="display:none;"></div>
+</div>
+
+<style>
+  .checker-container { font-family: sans-serif; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; }
+  .question { margin-bottom: 1.2rem; }
+  .question h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  button { margin-right: 0.5rem; padding: 0.5rem 1rem; font-size: 0.9rem; cursor: pointer; }
+  .result { margin-top: 1.5rem; padding: 1rem; border: 1px solid #aaa; background-color: #eef; font-weight: bold; }
+</style>
+
+<script>
+  let answers = [null, null, null, null, null];
+
+  function setAnswer(index, value) {
+    answers[index] = value;
+  }
+
+  function calculateResult() {
+    if (answers.includes(null)) {
+      alert("Please answer all questions.");
+      return;
+    }
+
+    let compatibleScore = 0;
+    if (answers[0]) compatibleScore++; // riser does NOT use seat bolts
+    if (answers[1]) compatibleScore++; // has enough space for bidet
+    if (!answers[2]) compatibleScore++; // spray zone is clear
+    if (answers[3]) compatibleScore++; // water line accessible
+    if (!answers[4]) compatibleScore++; // seat height not too high
+
+    const resultBox = document.getElementById("result");
+    resultBox.style.display = "block";
+
+    if (compatibleScore >= 4) {
+      resultBox.innerHTML = "✅ <strong>Good news!</strong> Your setup is likely compatible with most bidet attachments. Consider checking our top recommended products.";
+    } else if (compatibleScore >= 2) {
+      resultBox.innerHTML = "⚠️ <strong>Partial compatibility.</strong> You may need a hinged riser or toilet safety frame. See our workaround guide for help.";
+    } else {
+      resultBox.innerHTML = "❌ <strong>Incompatible setup.</strong> Your current raised seat is likely not compatible with a standard bidet. Consider alternative solutions like handheld sprayers or assistive toilet chairs.";
+    }
+  }
+</script>
