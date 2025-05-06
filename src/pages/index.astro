@@ -1,8 +1,47 @@
 ---
-layout: '../layouts/BaseLayout.astro'
-title: "Home"
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+const recent = posts.slice(0, 3);
 ---
 
-<h1>Welcome to RaisedToiletSeat.info 🚽</h1>
-<p>Your go-to guide for bidet-compatible raised toilet seats.</p>
-<a href="/blog">Read our latest guides</a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RaisedToiletSeat.info</title>
+  </head>
+  <body class="bg-white text-gray-800 font-sans p-6 max-w-4xl mx-auto">
+    <header class="text-center mb-10">
+      <h1 class="text-3xl font-bold mb-2">Find the Right Raised Toilet Seat (That Actually Works)</h1>
+      <p class="text-lg mb-4">Bidet-compatible. Easy to install. Safe for seniors. We test, review, and explain everything.</p>
+      <a href="/blog/bidet-compatibility" class="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700">Start with Bidet Compatibility →</a>
+    </header>
+
+    <section class="mb-12">
+      <h2 class="text-2xl font-semibold mb-4">Explore Our Top Guides</h2>
+      <div class="grid gap-4 md:grid-cols-3">
+        <a href="/blog/bidet-compatibility" class="block p-4 border rounded hover:shadow">🚿 Bidet Compatibility</a>
+        <a href="/blog/replacement-parts" class="block p-4 border rounded hover:shadow">🔩 Replacement Parts</a>
+        <a href="/blog/installation-guides" class="block p-4 border rounded hover:shadow">🛠 Installation & DIY</a>
+      </div>
+    </section>
+
+    <section class="mb-12 text-center">
+      <h2 class="text-2xl font-semibold mb-2">🧠 Not Sure What Works Together?</h2>
+      <p class="mb-4">Use our quick Compatibility Checker to find out if your riser and bidet are friends or foes.</p>
+      <a href="/tools/compatibility-checker" class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700">Try the Tool →</a>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">📰 Latest Blog Posts</h2>
+      <ul class="space-y-2">
+        {recent.map(post => (
+          <li>
+            <a class="text-blue-600 hover:underline" href={`/blog/${post.slug}`}>{post.data.title}</a>
+            <p class="text-sm text-gray-600">{post.data.description}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </body>
+</html>
