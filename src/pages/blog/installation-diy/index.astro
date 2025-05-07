@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const posts = [
+  {
+    title: "How to Install a Raised Toilet Seat (Step-by-Step)",
+    href: "/blog/how-to-install-a-raised-toilet-seat",
+    summary: "No plumber needed—just follow these steps to get your riser securely in place.",
+  },
+  {
+    title: "Frame vs Bolt-On: Which Is Safer and Easier?",
+    href: "/blog/secure-frame-vs-bolt-on",
+    summary: "Which raised seat style offers more stability, safety, and comfort? Let’s compare.",
+  },
+  {
+    title: "How to Install a Bathroom Grab Bar (With Stud Finder)",
+    href: "/blog/grab-bar-installation",
+    summary: "A secure grab bar could prevent serious injury. Here’s how to install it properly.",
+  },
+  {
+    title: "How to Adjust Toilet Seat Height (Without Buying a New One)",
+    href: "/blog/adjusting-seat-height",
+    summary: "Raise your toilet without replacing it—5 simple methods to improve accessibility.",
+  },
+  {
+    title: "Installing a Bidet Under a Raised Seat (Can It Be Done?)",
+    href: "/blog/installing-bidet-under-riser",
+    summary: "It’s tricky, but possible. Here’s how to make a bidet and riser work together.",
+  },
+];
+---
+
+<BaseLayout title="Installation & DIY Guides">
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold mb-4 text-center">Installation & DIY Guides</h1>
+    <p class="text-lg mb-8 text-center text-gray-600">
+      Step-by-step articles to help you install, adjust, or enhance your raised toilet seat setup—no plumbing degree required.
+    </p>
+    <ul class="space-y-6">
+      {posts.map((post) => (
+        <li class="border-b pb-4">
+          <a href={post.href} class="text-2xl font-semibold text-blue-700 hover:underline">{post.title}</a>
+          <p class="text-gray-600 mt-1">{post.summary}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+</BaseLayout>
