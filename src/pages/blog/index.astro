@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const clusters = [
+  {
+    title: "Bidet Compatibility Guides",
+    href: "/blog/bidet-compatibility",
+    summary: "Learn which raised toilet seats work with bidets—and which ones don’t. Start here if you're combining hygiene with accessibility.",
+  },
+  {
+    title: "Installation & DIY Guides",
+    href: "/blog/installation-diy",
+    summary: "From grab bar installation to riser repairs, these step-by-step articles help you stay safe and self-sufficient.",
+  },
+];
+---
+
+<BaseLayout title="Raised Toilet Seat Blog">
+  <section class="max-w-3xl mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold mb-6 text-center">Blog Index</h1>
+    <p class="text-lg mb-10 text-center text-gray-600">
+      Explore our focused content clusters for smarter, safer toilet seat upgrades.
+    </p>
+    <div class="space-y-8">
+      {clusters.map((cluster) => (
+        <div class="border-b pb-6">
+          <a href={cluster.href} class="text-2xl font-semibold text-blue-700 hover:underline">
+            {cluster.title}
+          </a>
+          <p class="mt-2 text-gray-600">{cluster.summary}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
