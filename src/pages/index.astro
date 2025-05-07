@@ -1,57 +1,90 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="RaisedToiletSeat.info">
-  <!-- Hero -->
-  <section class="max-w-3xl mx-auto px-6 py-10 text-center">
-    <h1 class="text-4xl font-bold mb-4">Raised Toilet Seats, Made Simple</h1>
-    <p class="text-lg text-gray-600 mb-6">
-      Understand compatibility. Find the right product. Upgrade safely. Especially if you're dealing with bidets.
-    </p>
-    <a href="/blog/bidet-compatibility" class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">
-      Start With Bidet Compatibility →
-    </a>
-  </section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RaisedToiletSeat.info</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
 
-  <!-- Features Grid -->
-  <section class="max-w-3xl mx-auto px-6 mb-12">
-    <h2 class="text-2xl font-semibold mb-4 text-center">What You'll Find Here</h2>
-    <div class="grid gap-4 md:grid-cols-3">
-      <div class="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-        <h3 class="font-semibold text-lg mb-2">🚿 Bidet Compatibility</h3>
-        <p class="text-sm text-gray-600">Know which risers and bidets work together—and which don’t.</p>
+    <!-- NAV & HEADER -->
+    <header class="px-4 py-6 border-b border-gray-200 bg-white shadow-sm">
+      <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <h2 class="text-xl font-bold text-blue-800">
+          <a href="/" class="hover:underline">RaisedToiletSeat.info</a>
+        </h2>
+        <nav class="flex gap-6 text-sm text-blue-700">
+          <a href="/" class="hover:underline">Home</a>
+          <a href="/blog" class="hover:underline">Blog</a>
+          <a href="/partners" class="hover:underline">Resources</a>
+        </nav>
       </div>
-      <div class="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-        <h3 class="font-semibold text-lg mb-2">🔩 Replacement Parts</h3>
-        <p class="text-sm text-gray-600">Bolts, brackets, hinges—find the exact piece you need.</p>
-      </div>
-      <div class="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
-        <h3 class="font-semibold text-lg mb-2">🛠 Installation Help</h3>
-        <p class="text-sm text-gray-600">DIY instructions and pro-tips to make setup safe and simple.</p>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Tool Feature -->
-  <section class="max-w-3xl mx-auto px-6 text-center bg-gray-50 rounded-lg p-6 mb-12">
-    <h2 class="text-2xl font-semibold mb-2">🧠 Compatibility Checker</h2>
-    <p class="text-gray-600 mb-4">Not sure if your raised seat and bidet can work together? Use our quick diagnostic tool.</p>
-    <a href="/tools/compatibility-checker" class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700">
-      Try the Tool →
-    </a>
-  </section>
+    <main class="max-w-3xl mx-auto p-6">
 
-  <!-- Manual Recent Posts -->
-  <section class="max-w-3xl mx-auto px-6 mb-12">
-    <h2 class="text-2xl font-semibold mb-4 text-center">Recent Articles</h2>
-    <ul class="space-y-3 text-blue-600 text-base">
-      <li><a href="/blog/bidet-compatibility">Why Most Raised Toilet Seats Don’t Work with Bidets →</a></li>
-      <li><a href="/blog/top-3-raised-bidet-seats">Top 3 Bidet-Compatible Raised Toilet Seats →</a></li>
-      <li><a href="/blog/bidet-alternatives-for-seniors">Bidet Alternatives for Seniors →</a></li>
-    </ul>
-  </section>
-</BaseLayout>
+      <!-- Hero -->
+      <section class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">Raised Toilet Seats, Made Simple</h1>
+        <p class="text-lg text-gray-600 mb-6">Understand compatibility. Find the right product. Upgrade safely. Especially if you're dealing with bidets.</p>
+        <a href="/blog/bidet-compatibility" class="inline-block bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Start With Bidet Compatibility →</a>
+      </section>
 
+      <!-- Features Grid -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-center">What You'll Find Here</h2>
+        <div class="grid gap-4 md:grid-cols-3">
+          <div class="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
+            <h3 class="font-semibold text-lg mb-2">🚿 Bidet Compatibility</h3>
+            <p class="text-sm text-gray-600">Know which risers and bidets work together—and which don’t.</p>
+          </div>
+          <div class="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
+            <h3 class="font-semibold text-lg mb-2">🔩 Replacement Parts</h3>
+            <p class="text-sm text-gray-600">Bolts, brackets, hinges—find the exact piece you need.</p>
+          </div>
+          <div class="border rounded-lg p-4 shadow-sm hover:shadow-md transition">
+            <h3 class="font-semibold text-lg mb-2">🛠 Installation Help</h3>
+            <p class="text-sm text-gray-600">DIY instructions and pro-tips to make setup safe and simple.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tool Feature -->
+      <section class="text-center bg-gray-50 rounded-lg p-6 mb-12">
+        <h2 class="text-2xl font-semibold mb-2">🧠 Compatibility Checker</h2>
+        <p class="text-gray-600 mb-4">Not sure if your raised seat and bidet can work together? Use our quick diagnostic tool.</p>
+        <a href="/tools/compatibility-checker" class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700">Try the Tool →</a>
+      </section>
+
+      <!-- Manual Recent Posts -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4 text-center">Recent Articles</h2>
+        <ul class="space-y-3 text-blue-600 text-base">
+          <li><a href="/blog/bidet-compatibility">Why Most Raised Toilet Seats Don’t Work with Bidets →</a></li>
+          <li><a href="/blog/top-3-raised-bidet-seats">Top 3 Bidet-Compatible Raised Toilet Seats →</a></li>
+          <li><a href="/blog/bidet-alternatives-for-seniors">Bidet Alternatives for Seniors →</a></li>
+        </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center text-sm text-gray-500 border-t pt-6">
+        <p class="mb-2">🚽 Built with 💙 by Nova (until she is fired)</p>
+        <p class="text-sm text-gray-500 mt-2">
+          Part of the <a href="https://toiletseathelper.com" class="underline hover:text-blue-700">ToiletSeatHelper.com</a> ecosystem.
+        </p>
+        <nav class="space-x-4 mt-2">
+          <a href="/privacy" class="hover:underline">Privacy</a>
+          <a href="/terms" class="hover:underline">Terms</a>
+          <a href="/affiliate-disclosure" class="hover:underline">Affiliate Disclosure</a>
+          <a href="/disclaimer" class="hover:underline">Disclaimer</a>
+        </nav>
+      </footer>
+
+    </main>
+  </body>
+</html>
 
 
