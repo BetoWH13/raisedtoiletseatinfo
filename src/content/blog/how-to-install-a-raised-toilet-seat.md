@@ -100,3 +100,17 @@ If it shifts? Re-tighten or add bumpers.
 - [How to Fix a Wobbly or Loose Toilet Seat Riser](/blog/fix-loose-toilet-seat-riser)  
 - [Installing a Bidet Under a Raised Seat (Can It Be Done?)](/blog/installing-bidet-under-riser)
 
+---
+
+<div class="mt-8 bg-blue-50 border border-blue-200 p-4 rounded text-sm text-blue-900 text-center">
+  Looking for compatible parts or accessories?  
+  <a 
+    href="https://shrsl.com/4w7pc" 
+    target="_blank" 
+    rel="nofollow noopener"
+    class="underline text-blue-700 hover:text-blue-900 ml-1"
+  >
+    Browse recommended options →
+  </a>
+</div>
+
