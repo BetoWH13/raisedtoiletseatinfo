@@ -29,7 +29,7 @@ Think of this like a mini shower head for your toilet.
 - Requires some hand strength and coordination  
 - May need a small water line install (no electricity though)
 
-> 🔗 [See top-rated handheld sprayer kits](https://amzn.to/your-affiliate-link)
+> 🔗 [Browse top-rated hygiene accessories](https://shrsl.com/4w7pc)
 
 ---
 
@@ -47,7 +47,7 @@ These are like padded commode chairs—but with built-in water spray options.
 - Bulky  
 - Not as aesthetically sleek as built-in bidets
 
-> 🔗 [Explore assistive toilet chairs](https://amzn.to/your-affiliate-link)
+> 🔗 [Explore assistive toilet chairs and more](https://shrsl.com/4w7pc)
 
 ---
 
@@ -88,3 +88,7 @@ The solutions above are **simple, safe, and bidet-ish enough** to get the job do
 ---
 
 Want help comparing sprayers or portable bidets? Check our upcoming buyer's guide → [Coming soon!](/blog/portable-bidet-guide)
+
+---
+
+**Need more bathroom comfort solutions? [Discover more options here.](https://shrsl.com/4w7pc)**

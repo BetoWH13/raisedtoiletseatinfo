@@ -100,3 +100,7 @@ That’s it. No drills. No drama.
 ## 🔗 Related:
 - [Where to Buy Replacement Parts for Raised Toilet Seats](/blog/where-to-buy-riser-parts)
 - [How to Fix a Wobbly or Loose Toilet Seat Riser](/blog/fix-loose-toilet-seat-riser)
+
+---
+
+**Looking for toilet seat repair kits or accessories? [See more options here.](https://shrsl.com/4w7pc)**

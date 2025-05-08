@@ -102,3 +102,7 @@ If you're installing on tile or drywall with no studs nearby:
 ## 🔗 Related:
 - [Frame vs Bolt-On: Which Is Safer and Easier?](/blog/secure-frame-vs-bolt-on)  
 - [How to Adjust Toilet Seat Height (Without Buying a New One)](/blog/adjusting-seat-height)
+
+---
+
+**Need grab bars, frames, or other bathroom safety products? [Browse more options here.](https://shrsl.com/4w7pc)**

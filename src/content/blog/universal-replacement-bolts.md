@@ -81,3 +81,7 @@ Then go for the OEM bolt kit or a “universal extra-long bolt set.”
 ## 🔗 Related:
 - [The Most Common Raised Seat Parts (And What They’re Called)](/blog/most-common-riser-parts)
 - [How to Fix a Wobbly or Loose Toilet Seat Riser](/blog/fix-loose-toilet-seat-riser)
+
+---
+
+**Need universal bolts or toilet seat hardware? [Browse more solutions here.](https://shrsl.com/4w7pc)**

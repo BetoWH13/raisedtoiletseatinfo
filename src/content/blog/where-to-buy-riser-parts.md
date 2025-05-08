@@ -98,3 +98,7 @@ Before you buy:
 ## 🔗 Related:
 - [Are There Universal Toilet Seat Bolts?](/blog/universal-replacement-bolts)
 - [What Tools You Actually Need to Repair a Seat](/blog/tools-for-seat-repair)
+
+---
+
+**Still searching for the right part? [Find more sources and deals here.](https://shrsl.com/4w7pc)**

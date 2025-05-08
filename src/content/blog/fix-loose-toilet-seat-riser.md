@@ -96,3 +96,7 @@ Most fixes take 5–10 minutes—and a single $5 part.
 ## 🔗 Related:
 - [The Most Common Raised Seat Parts (And What They’re Called)](/blog/most-common-riser-parts)
 - [What Tools You Actually Need to Repair a Seat](/blog/tools-for-seat-repair)
+
+---
+
+**Looking for replacement parts or accessories? [See more solutions here.](https://shrsl.com/4w7pc)**

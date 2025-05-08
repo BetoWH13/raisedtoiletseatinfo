@@ -75,3 +75,7 @@ Knowing what to search for is half the battle. Here's a cheat sheet to copy:
 - [How to Fix a Wobbly Raised Toilet Seat](/blog/fix-loose-toilet-seat-riser)
 - [Where to Buy Replacement Parts for Raised Toilet Seats](/blog/where-to-buy-riser-parts)
 
+---
+
+**Need bolts, clamps, or other parts? [Find more solutions here.](https://shrsl.com/4w7pc)**
+

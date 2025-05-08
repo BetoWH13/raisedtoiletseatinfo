@@ -80,6 +80,11 @@ If you’re renovating down the road, this upgrade may eliminate the need for ad
 
 ## 🧠 Nova’s Decision Matrix
 
+---
+
+**Looking for recommended toilet seat accessories and solutions? [Find more options here.](https://shrsl.com/4w7pc)**
+
+
 | Need                      | Best Option                     |
 |---------------------------|----------------------------------|
 | Budget fix                | Clamp-on riser                  |
