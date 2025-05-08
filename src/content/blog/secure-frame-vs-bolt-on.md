@@ -89,4 +89,19 @@ Look for models that say:
 
 ## 🔗 Related:
 - [How to Install a Raised Toilet Seat (Step-by-Step)](/blog/how-to-install-a-raised-toilet-seat)  
-- [What Tools You Actually Need to Repair a Seat](/blog/tools-for-seat-repair)
+- [What Tools You Actually Need to Repair a Seat](/blog/tools-for-seat-repair)  
+
+---
+
+<div class="mt-8 bg-blue-50 border border-blue-200 p-4 rounded text-sm text-blue-900 text-center">
+  Looking for compatible parts or accessories?  
+  <a 
+    href="https://shrsl.com/4w7pc" 
+    target="_blank" 
+    rel="nofollow noopener"
+    class="underline text-blue-700 hover:text-blue-900 ml-1"
+  >
+    Browse recommended options →
+  </a>
+</div>
+
