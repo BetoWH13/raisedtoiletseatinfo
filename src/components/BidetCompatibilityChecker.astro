@@ -1,0 +1,167 @@
+---
+const questions = [
+  {
+    text: "Does your riser attach using the toilet seat bolts?",
+    help: "These are the bolts that hold your regular toilet seat in place.",
+    answers: [
+      { label: "Yes", value: true },
+      { label: "No", value: false }
+    ],
+    isCompatible: answer => answer === false
+  },
+  {
+    text: "Is there enough space (~0.5\") between your riser and toilet bowl?",
+    help: null,
+    answers: [
+      { label: "Yes", value: true },
+      { label: "No", value: false }
+    ],
+    isCompatible: answer => answer === true
+  },
+  {
+    text: "Does your riser block the rear spray zone?",
+    help: "The rear spray zone is where the bidet nozzle needs to reach.",
+    answers: [
+      { label: "No", value: false },
+      { label: "Yes", value: true }
+    ],
+    isCompatible: answer => answer === false
+  },
+  {
+    text: "Can you access the water line near the toilet tank?",
+    help: "You'll need to connect the bidet to the water supply.",
+    answers: [
+      { label: "Yes", value: true },
+      { label: "No", value: false }
+    ],
+    isCompatible: answer => answer === true
+  },
+  {
+    text: "Will the total seat height be too high (over ~21\")?",
+    help: null,
+    answers: [
+      { label: "No", value: false },
+      { label: "Yes", value: true }
+    ],
+    isCompatible: answer => answer === false
+  }
+];
+---
+
+<div class="checker-container">
+  <h2>🧻 Bidet + Riser Compatibility Checker</h2>
+  <form id="compatibilityForm" on:submit="event.preventDefault();">
+    {questions.map((q, i) => (
+      <fieldset class="question" key={i}>
+        <legend>{i + 1}. {q.text}</legend>
+        {q.help && <small class="help">{q.help}</small>}
+        <div class="answers">
+          {q.answers.map((a, j) => (
+            <label class={`answer-btn${typeof window !== 'undefined' && window.answers && window.answers[i] === a.value ? " selected" : ""}`}>
+              <input
+                type="radio"
+                name={`q${i}`}
+                value={a.value}
+                checked={typeof window !== 'undefined' && window.answers && window.answers[i] === a.value}
+                onChange={() => setAnswer(i, a.value)}
+                aria-checked={typeof window !== 'undefined' && window.answers && window.answers[i] === a.value}
+                required
+              />
+              {a.label}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+    ))}
+    <button
+      type="button"
+      class="check-btn"
+      onClick={calculateResult}
+      disabled={typeof window !== 'undefined' && window.answers && window.answers.some(a => a === null)}
+    >
+      Check Compatibility
+    </button>
+  </form>
+  <div id="result" class="result" style="display:none;" aria-live="polite"></div>
+</div>
+
+<style>
+  .checker-container { font-family: sans-serif; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; max-width: 500px; margin: 0 auto; }
+  .question { margin-bottom: 1.2rem; border: none; }
+  .question legend { font-size: 1rem; margin-bottom: 0.5rem; font-weight: bold; }
+  .help { display: block; font-size: 0.85rem; color: #555; margin-bottom: 0.3rem; }
+  .answers { display: flex; gap: 1rem; }
+  .answer-btn { margin-right: 0.5rem; padding: 0.5rem 1rem; font-size: 0.9rem; cursor: pointer; border: 1px solid #ccc; border-radius: 6px; background: #fff; transition: background 0.2s, border 0.2s; }
+  .answer-btn.selected, .answer-btn input:checked + span { background: #b3e5fc; border: 2px solid #0288d1; font-weight: bold; }
+  .answer-btn input { display: none; }
+  .check-btn { margin-top: 1rem; padding: 0.7rem 1.5rem; font-size: 1rem; background: #0288d1; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+  .check-btn:disabled { background: #ccc; cursor: not-allowed; }
+  .result { margin-top: 1.5rem; padding: 1rem; border: 1px solid #aaa; background-color: #eef; font-weight: bold; min-height: 2.5rem; }
+  .affiliate-link { color: #0056b3; text-decoration: underline; }
+</style>
+
+<script type="module">
+  // Ensure answers array is available globally for reactivity in Astro islands
+  if (typeof window !== 'undefined') {
+    window.answers = Array(questions.length).fill(null);
+  }
+
+  function setAnswer(index, value) {
+    if (typeof window === 'undefined') return;
+    window.answers[index] = value;
+    // Optionally, update UI to reflect selection
+    // If the result box is visible, hide it on answer change
+    document.getElementById("result").style.display = "none";
+    // Force re-render for Astro islands (if using)
+    document.querySelectorAll('.answer-btn').forEach(btn => btn.classList.remove('selected'));
+    document.querySelectorAll('input[type="radio"]:checked').forEach(input => {
+      input.parentElement.classList.add('selected');
+    });
+    // Enable/disable button
+    document.querySelector('.check-btn').disabled = window.answers.some(a => a === null);
+  }
+
+  function calculateResult() {
+    if (typeof window === 'undefined') return;
+    if (window.answers.includes(null)) {
+      alert("Please answer all questions.");
+      return;
+    }
+
+    let compatibleScore = 0;
+    const failedQuestions = [];
+
+    questions.forEach((q, i) => {
+      if (q.isCompatible(window.answers[i])) {
+        compatibleScore++;
+      } else {
+        failedQuestions.push(q.text);
+      }
+    });
+
+    const resultBox = document.getElementById("result");
+    resultBox.style.display = "block";
+
+    if (compatibleScore >= 4) {
+      resultBox.innerHTML = `
+        ✅ <strong>Good news!</strong> Your setup is likely compatible with most bidet attachments.<br>
+        <a href="https://amzn.to/3Zb5vQK" target="_blank" rel="noopener sponsored" class="affiliate-link">
+          Browse top-rated bidet attachments here
+        </a>.
+      `;
+    } else if (compatibleScore >= 2) {
+      resultBox.innerHTML = `
+        ⚠️ <strong>Partial compatibility.</strong> You may need a hinged riser or toilet safety frame.<br>
+        <span class="details">Check our workaround guide for tips. Issues detected with:<br>
+        <ul>${failedQuestions.map(q => `<li>${q}</li>`).join('')}</ul></span>
+      `;
+    } else {
+      resultBox.innerHTML = `
+        ❌ <strong>Incompatible setup.</strong> Your current raised seat is likely not compatible with a standard bidet.<br>
+        <span class="details">Consider alternatives like handheld sprayers or assistive toilet chairs.<br>
+        Issues detected with:<br>
+        <ul>${failedQuestions.map(q => `<li>${q}</li>`).join('')}</ul></span>
+      `;
+    }
+  }
+</script>
