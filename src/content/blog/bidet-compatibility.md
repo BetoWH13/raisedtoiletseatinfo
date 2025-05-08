@@ -35,7 +35,8 @@ Here are options that actually work—**tested and trusted**:
 These lift **above** the bidet attachment, reducing conflict.
 
 > Look for “hinged risers” or risers labeled “bidet-compatible.”  
-> Brands like Carex, Vive, and Bemis have bidet-friendly models.
+> Brands like Carex, Vive, and Bemis have bidet-friendly models.  
+> [See on Amazon](https://amzn.to/3Zb5vQK)
 
 ### ✅ Separate Toilet Frames  
 Use a **standalone frame with armrests** instead of a bolt-on riser. This keeps the toilet seat free for a bidet attachment.

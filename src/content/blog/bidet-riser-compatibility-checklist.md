@@ -72,7 +72,8 @@ You can print this, save it, or use it as a **prep list** before buying anything
 Nova’s recommendations:
 - 👉 Use **hinged risers** that mount *above* the bidet
 - 👉 Try **toilet safety frames** instead of risers
-- 👉 Or go all-in with a **bidet + riser integrated unit**
+- 👉 Or go all-in with a **bidet + riser integrated unit**  
+[See on Amazon](https://amzn.to/3Zb5vQK)
 
 ---
 

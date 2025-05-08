@@ -27,7 +27,7 @@ Here are three raised toilet seats that **play nicely with bidets**—saving you
 - ✅ No-tool install
 
 > Works with: TUSHY, Brondell, Luxe models  
-> 🔗 [Check price here](https://amzn.to/your-affiliate-link)
+> 🔗 [See on Amazon](https://amzn.to/3Zb5vQK)
 
 ---
 
@@ -37,7 +37,7 @@ Here are three raised toilet seats that **play nicely with bidets**—saving you
 - ✅ Ideal for seniors or post-surgery use
 
 > Pair with any standard bidet attachment  
-> 🔗 [View on Amazon](https://amzn.to/your-affiliate-link)
+> 🔗 [See on Amazon](https://amzn.to/3Zb5vQK)
 
 ---
 

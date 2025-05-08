@@ -39,6 +39,7 @@ Some bolt-on risers now offer **open mounting holes** to accommodate a bidet pla
 Popular options:
 - Vaunn Medical Bolt-On Riser  
 - Carex elongated bidet-compatible models (check specs)
+[See on Amazon](https://amzn.to/3Zb5vQK)
 
 ---
 

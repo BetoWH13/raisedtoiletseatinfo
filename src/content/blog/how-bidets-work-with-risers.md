@@ -67,7 +67,8 @@ It installs **above** the bidet plate, giving everyone space.
 Toilet safety frames give height without blocking the seat bolts.
 
 ### ✅ Shop Combo Units  
-Some brands now sell risers specifically **designed to accommodate bidets**.
+Some brands now sell risers specifically **designed to accommodate bidets**.  
+[See on Amazon](https://amzn.to/3Zb5vQK)
 
 ---
 
